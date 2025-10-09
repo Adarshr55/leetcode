@@ -3,7 +3,6 @@
  * @return {number[]}
  */
 var getConcatenation = function(nums) {
-    let a=[...nums,...nums]
-    return a
+    return nums.concat(nums)
     
 };
