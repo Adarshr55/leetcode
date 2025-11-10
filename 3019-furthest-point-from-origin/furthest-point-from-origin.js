@@ -7,12 +7,8 @@ var furthestDistanceFromOrigin = function(moves) {
     let R=0
     let U=0
     for(let i=0;i<moves.length;i++){
-        if(moves[i]==="L"){
-            L++
-        }   
-        else if(moves[i]==="R"){
-            R++
-        }
+        if(moves[i]==="L") L++
+        else if(moves[i]==="R") R++
           else U++
     }
     return Math.abs(L-R )+U
