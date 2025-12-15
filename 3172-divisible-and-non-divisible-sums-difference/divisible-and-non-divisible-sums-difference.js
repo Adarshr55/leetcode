@@ -9,7 +9,7 @@ var differenceOfSums = function(n, m) {
     for(i=0;i<=n;i++){
         if(i %m !==0){
           sumn+=i
-        }else if(i%m==0){
+        }else {
             summ+=i
         }
             
