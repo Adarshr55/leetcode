@@ -3,12 +3,14 @@
  * @return {number[]}
  */
 var findDuplicates = function(nums) {
-    nums.sort((a,b)=>a-b)
-    let arr=[]
-    for(i=0;i<nums.length;i++){
-        if(nums[i]==nums[i+1]){
-             arr.push(nums[i])
+     let set = new Set()
+     let arr=[]
+     for(n of nums){
+        if(set.has(n)){
+            arr.push(n)
         }
-    }
-    return arr
+        set.add(n)
+     }
+     return arr
+
 };
