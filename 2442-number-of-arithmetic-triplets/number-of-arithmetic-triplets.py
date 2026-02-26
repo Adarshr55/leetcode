@@ -5,10 +5,9 @@ class Solution(object):
         :type diff: int
         :rtype: int
         """
+        newset=set(nums)
         count=0
         for i in range(len(nums)):
-            for j in range(i+1,len(nums)):
-                for k in range(j+1,len(nums)):
-                    if nums[j]-nums[i]==diff and nums[k]-nums[j]==diff:
-                        count+=1
+            if nums[i]+diff in newset and nums[i]+ 2*diff in newset:
+                count+=1
         return count
